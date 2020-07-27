@@ -4,6 +4,8 @@
 #include "switches.h"
 #include "buzzer.h"
 
+#include "stateMachine.h"
+
 #include <lcdutils.h>
 #include <lcddraw.h>
 
@@ -17,7 +19,6 @@ void main(void)
   buzzer_init();
 
   lcd_init();
-  //clearScreen(COLOR_CYAN);
 
   
 or_sr(0x18);  // CPU off, GIE on

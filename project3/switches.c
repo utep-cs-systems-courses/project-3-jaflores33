@@ -5,6 +5,8 @@
 #include <lcdutils.h>
 #include <lcddraw.h>
 
+#include "stateMachine.h"
+
 char switch_state_down, switch_state_changed; /* effectively boolean */
 
 
@@ -47,7 +49,7 @@ void switch_interrupt_handler()
   if(p2val & SW1 ? 0 : 1){
     switch_state_down=1;
     state_machine(1);
-    screenDis(1);
+    //screenDis(1);
     
     //ledLight(1);
   }
@@ -55,7 +57,7 @@ void switch_interrupt_handler()
   else if(p2val & SW2 ? 0 : 2){
     switch_state_down=1;
     state_machine(2);
-    screenDis(2);
+    //screenDis(2);
     
     //ledLight(2);
   }
@@ -63,13 +65,13 @@ void switch_interrupt_handler()
   else if(p2val & SW3 ? 0 : 3){
     switch_state_down=1;
     state_machine(3);
-    screenDis(3);
+    //screenDis(3);
   }
 
   else if(p2val & SW4 ? 0 : 4){
     switch_state_down=1;
     state_machine(4);
-    screenDis(4);
+    //screenDis(4);
   }
 
   //else{
@@ -78,6 +80,6 @@ void switch_interrupt_handler()
     //}
   //switch_state_down = (p2val & SW1) ? 0 : 1; /* 0 when SW1 is up */
 
-  led_update();
+  //led_update();
   
 }

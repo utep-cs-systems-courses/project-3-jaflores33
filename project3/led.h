@@ -9,7 +9,7 @@
 
 void led_init();/* initialize LEDs */
 void led_update();/* update leds */
-void state_machine(char state); //states
+//void state_machine(char state); //states
 
 void screenDis(char state);
 void ledLight(int state);

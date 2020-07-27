@@ -11,7 +11,7 @@ void led_init()
   switch_state_changed = 1;
   led_update();
 }
-
+/*
 void state_machine(char state){
   //each state makes a sound, except state one that silences it
   if(state == 1){
@@ -53,7 +53,9 @@ void state_machine(char state){
   //buzzer_set_period(0);
 
 }
+*/
 
+/*
 void screenDis(char state){
   if(state == 1){
     clearScreen(COLOR_WHITE);
@@ -72,7 +74,7 @@ void screenDis(char state){
   }
   
 }
-
+*/
 
 
 void led_update(){
