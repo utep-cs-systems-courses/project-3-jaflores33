@@ -9,10 +9,13 @@
 
 void led_init();/* initialize LEDs */
 void led_update();/* update leds */
+
+void dimLed();
+
 //void state_machine(char state); //states
 
-void screenDis(char state);
-void ledLight(int state);
+//void screenDis(char state);
+//void ledLight(int state);
 
 // these are boolean flags
 extern unsigned char leds_changed, green_led_state, red_led_state;

@@ -11,15 +11,31 @@
 
 //#define GREEN_LED BIT6
 
+int redraw =1;
+
 void main(void)
 {
   configureClocks();
   switch_init();
-  //led_init();
+  led_init();
+  dimLed();
+  
   buzzer_init();
 
   lcd_init();
 
   
 or_sr(0x18);  // CPU off, GIE on
+
+ for(;;){
+   while(!redraw){
+     P1OUT &= ~LED_GREEN;
+     or_sr(0x18);
+   }
+
+   P1OUT |= LED_GREEN;
+   __delay_cycles(250000);
+   redraw = 0;
+ }
+ 
 } 

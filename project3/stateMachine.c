@@ -63,7 +63,7 @@ void state_machine(int state){
     break;
 
   default:
-    buzzer_set_period(0);
+    //buzzer_set_period(0);
     break;
   }
   

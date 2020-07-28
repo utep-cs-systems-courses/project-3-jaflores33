@@ -9,6 +9,7 @@
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
 
+int redraw;
 
 static char switch_update_interrupt_sense()
 {
@@ -35,7 +36,9 @@ void switch_init()/* setup switch */
   P2DIR &= ~SWITCHES;/* set switches' bits for input */
 
   switch_update_interrupt_sense();
+  switch_interrupt_handler();
 
+  
   //led_update();
   //ledLight(0);
 }
@@ -48,30 +51,28 @@ void switch_interrupt_handler()
 
   if(p2val & SW1 ? 0 : 1){
     switch_state_down=1;
-    state_machine(1);
-    //screenDis(1);
+    state_machine(1);  
+    redraw=1;
     
-    //ledLight(1);
   }
 
   else if(p2val & SW2 ? 0 : 2){
     switch_state_down=1;
     state_machine(2);
-    //screenDis(2);
+    redraw=1;
     
-    //ledLight(2);
   }
 
   else if(p2val & SW3 ? 0 : 3){
     switch_state_down=1;
     state_machine(3);
-    //screenDis(3);
+    redraw=1;
   }
 
   else if(p2val & SW4 ? 0 : 4){
     switch_state_down=1;
     state_machine(4);
-    //screenDis(4);
+    redraw=1;
   }
 
   //else{
