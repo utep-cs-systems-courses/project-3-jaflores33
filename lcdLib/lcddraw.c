@@ -4,6 +4,15 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+void drawTriangle(u_char colMin, u_char rowMin, u_char height, u_int colorBGR)
+{
+  for (int row = 1; row < height+1; row++) {
+    for (int col = 1; col < (row+(row-1)); col++) {
+      drawPixel((col+colMin)+(height-row), row+rowMin, colorBGR);
+    }
+  }
+}
+
 
 /** Draw single pixel at x,row 
  *
