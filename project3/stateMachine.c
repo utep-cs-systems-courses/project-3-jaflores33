@@ -20,6 +20,9 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_WHITE);
+
+    drawString8x12(50, 100, "One", COLOR_BLACK, COLOR_WHITE);
+    
     drawTriangle(20, 20, 30, COLOR_BLACK);
     break;
     
@@ -31,6 +34,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_BLUE);
+    drawString8x12(50, 100, "Two", COLOR_BLACK, COLOR_PURPLE);
     drawTriangle(20, 40, 30,COLOR_PURPLE);
     break;
 
@@ -42,6 +46,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_RED);
+    drawString8x12(50, 100, "Three", COLOR_BLACK, COLOR_ORANGE);
     drawTriangle(40, 20, 30,COLOR_ORANGE);
     break;
     
@@ -53,6 +58,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_YELLOW);
+    drawString8x12(50, 100, "Four", COLOR_BLACK, COLOR_GREEN);
     drawTriangle(40, 40, 30,COLOR_GREEN);
     break;
 
