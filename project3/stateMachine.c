@@ -20,6 +20,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_WHITE);
+    drawTriangle(20, 20, 30, COLOR_BLACK);
     break;
     
   case 2:
@@ -30,6 +31,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_BLUE);
+    drawTriangle(20, 40, 30,COLOR_PURPLE);
     break;
 
   case 3:
@@ -40,6 +42,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_RED);
+    drawTriangle(40, 20, 30,COLOR_ORANGE);
     break;
     
   case 4:
@@ -50,6 +53,7 @@ void state_machine(int state){
       __delay_cycles(2500000);
     }
     clearScreen(COLOR_YELLOW);
+    drawTriangle(40, 40, 30,COLOR_GREEN);
     break;
 
   default:
