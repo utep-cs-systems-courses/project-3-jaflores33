@@ -15,10 +15,15 @@ int redraw =1;
 
 void main(void)
 {
+
+  P1DIR |= LED_GREEN;
+  P1OUT |= LED_GREEN;
+
+  
   configureClocks();
   switch_init();
   led_init();
-  dimLed();
+  //dimLed();
   
   buzzer_init();
 
