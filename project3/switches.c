@@ -6,6 +6,7 @@
 #include <lcddraw.h>
 
 #include "stateMachine.h"
+#include "sm.h"
 
 char switch_state_down, switch_state_changed; /* effectively boolean */
 
@@ -50,28 +51,32 @@ void switch_interrupt_handler()
   switch_state_changed=1;
 
   if(p2val & SW1 ? 0 : 1){
-    switch_state_down=1;
-    state_machine(1);  
+    //    switch_state_down=1;
+    //state_machine(1);
+    moveState(1);
     redraw=1;
     
   }
 
   else if(p2val & SW2 ? 0 : 2){
-    switch_state_down=1;
-    state_machine(2);
+    //switch_state_down=1;
+    //state_machine(2);
+    moveState(2);
     redraw=1;
     
   }
 
   else if(p2val & SW3 ? 0 : 3){
-    switch_state_down=1;
-    state_machine(3);
+    //switch_state_down=1;
+    //state_machine(3);
+    moveState(3);
     redraw=1;
   }
 
   else if(p2val & SW4 ? 0 : 4){
-    switch_state_down=1;
-    state_machine(4);
+    //switch_state_down=1;
+    //state_machine(4);
+    moveState(4);
     redraw=1;
   }
 

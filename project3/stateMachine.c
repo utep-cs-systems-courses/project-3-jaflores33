@@ -24,6 +24,7 @@ void state_machine(int state){
     drawString8x12(50, 100, "One", COLOR_BLACK, COLOR_WHITE);
     
     drawTriangle(20, 20, 30, COLOR_BLACK);
+    state=0;
     break;
     
   case 2:
@@ -36,6 +37,7 @@ void state_machine(int state){
     clearScreen(COLOR_BLUE);
     drawString8x12(50, 100, "Two", COLOR_BLACK, COLOR_PURPLE);
     drawTriangle(20, 40, 30,COLOR_PURPLE);
+    state=0;
     break;
 
   case 3:
@@ -48,6 +50,7 @@ void state_machine(int state){
     clearScreen(COLOR_RED);
     drawString8x12(50, 100, "Three", COLOR_BLACK, COLOR_ORANGE);
     drawTriangle(40, 20, 30,COLOR_ORANGE);
+    state=0;
     break;
     
   case 4:
@@ -60,6 +63,7 @@ void state_machine(int state){
     clearScreen(COLOR_YELLOW);
     drawString8x12(50, 100, "Four", COLOR_BLACK, COLOR_GREEN);
     drawTriangle(40, 40, 30,COLOR_GREEN);
+    state=0;
     break;
 
   default:

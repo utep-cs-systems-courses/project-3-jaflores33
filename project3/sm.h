@@ -1,6 +1,6 @@
 #ifndef stateMachine_included
 #define stateMachine_included
 
-void state_machine();
+void moveState();
 
-#endif
+#endif // included

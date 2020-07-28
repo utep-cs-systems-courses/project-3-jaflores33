@@ -24,13 +24,14 @@ void main(void)
   switch_init();
   led_init();
   //dimLed();
+  enableWDTInterrupts();
   
   buzzer_init();
 
   lcd_init();
 
   
-or_sr(0x18);  // CPU off, GIE on
+  //or_sr(0x18);  // CPU off, GIE on
 
  for(;;){
    while(!redraw){
@@ -39,7 +40,7 @@ or_sr(0x18);  // CPU off, GIE on
    }
 
    P1OUT |= LED_GREEN;
-   __delay_cycles(250000);
+   __delay_cycles(2500000);
    redraw = 0;
  }
  

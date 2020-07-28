@@ -9,7 +9,7 @@ AR              = msp430-elf-ar
 
 all: button.elf
 
-button.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o stateMachine.o switches.o buzzer.o buttonMain.o ../lib/libTimer.a
+button.elf: ${COMMON_OBJECTS} sm.o p1_interrupt_handler.o wdInterruptHandler.o led.o stateMachine.o switches.o buzzer.o buttonMain.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^ -lLcd -lp2sw -lTimer 
 
 
