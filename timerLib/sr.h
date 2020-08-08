@@ -6,4 +6,6 @@ int  get_sr(void);
 void or_sr (int or_val);
 void and_sr(int and_val);
 
+void off();
+
 #endif

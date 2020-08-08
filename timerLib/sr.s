@@ -27,3 +27,8 @@ and_sr:	nop
 	and r12, r2
 	nop
 	ret
+
+
+	.global off
+off:
+	and	#0xffef, 0(r1)
