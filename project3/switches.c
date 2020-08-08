@@ -8,9 +8,11 @@
 #include "stateMachine.h"
 #include "sm.h"
 
+#include <libTimer.h>
+
 char switch_state_down, switch_state_changed; /* effectively boolean */
 
-int redraw;
+char redraw;
 
 static char switch_update_interrupt_sense()
 {
